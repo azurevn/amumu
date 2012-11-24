@@ -76,8 +76,18 @@
     <Compile Include="LienHe.Designer.cs">
       <DependentUpon>LienHe.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVienDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NhanVienDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLThucPhamDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLThucPhamDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,11 +100,11 @@
     <Compile Include="QuanLyNhanVien.Designer.cs">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyThucAn.cs">
+    <Compile Include="QuanLyThucPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyThucAn.Designer.cs">
-      <DependentUpon>QuanLyThucAn.cs</DependentUpon>
+    <Compile Include="QuanLyThucPham.Designer.cs">
+      <DependentUpon>QuanLyThucPham.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyThucUong.cs">
       <SubType>Form</SubType>
@@ -160,8 +170,8 @@
     <EmbeddedResource Include="QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyThucAn.resx">
-      <DependentUpon>QuanLyThucAn.cs</DependentUpon>
+    <EmbeddedResource Include="QuanLyThucPham.resx">
+      <DependentUpon>QuanLyThucPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyThucUong.resx">
       <DependentUpon>QuanLyThucUong.cs</DependentUpon>
@@ -181,6 +191,18 @@
     <EmbeddedResource Include="TKThang.resx">
       <DependentUpon>TKThang.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="NhanVienDS.xsc">
+      <DependentUpon>NhanVienDS.xsd</DependentUpon>
+    </None>
+    <None Include="NhanVienDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NhanVienDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NhanVienDS.xss">
+      <DependentUpon>NhanVienDS.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -190,6 +212,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLThucPhamDS.xsc">
+      <DependentUpon>QLThucPhamDS.xsd</DependentUpon>
+    </None>
+    <None Include="QLThucPhamDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLThucPhamDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLThucPhamDS.xss">
+      <DependentUpon>QLThucPhamDS.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

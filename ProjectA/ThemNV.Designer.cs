@@ -35,7 +35,7 @@
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -48,8 +48,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.dtNgayLam = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayLam = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // rbNu
@@ -84,6 +84,7 @@
             this.btDong.TabIndex = 32;
             this.btDong.Text = "Đóng";
             this.btDong.UseVisualStyleBackColor = true;
+            this.btDong.Click += new System.EventHandler(this.btDong_Click);
             // 
             // btThem
             // 
@@ -93,6 +94,7 @@
             this.btThem.TabIndex = 33;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // txtCMND
             // 
@@ -115,12 +117,12 @@
             this.txtTaiKhoan.Size = new System.Drawing.Size(267, 20);
             this.txtTaiKhoan.TabIndex = 25;
             // 
-            // txtPhone
+            // txtSDT
             // 
-            this.txtPhone.Location = new System.Drawing.Point(101, 283);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(267, 20);
-            this.txtPhone.TabIndex = 28;
+            this.txtSDT.Location = new System.Drawing.Point(101, 283);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(267, 20);
+            this.txtSDT.TabIndex = 28;
             // 
             // txtDiaChi
             // 
@@ -237,29 +239,29 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Thêm Nhân Viên";
             // 
-            // dtNgaySinh
+            // dtpNgaySinh
             // 
-            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgaySinh.Location = new System.Drawing.Point(101, 122);
-            this.dtNgaySinh.Name = "dtNgaySinh";
-            this.dtNgaySinh.Size = new System.Drawing.Size(267, 20);
-            this.dtNgaySinh.TabIndex = 36;
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(101, 122);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(267, 20);
+            this.dtpNgaySinh.TabIndex = 36;
             // 
-            // dtNgayLam
+            // dtpNgayLam
             // 
-            this.dtNgayLam.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgayLam.Location = new System.Drawing.Point(101, 163);
-            this.dtNgayLam.Name = "dtNgayLam";
-            this.dtNgayLam.Size = new System.Drawing.Size(267, 20);
-            this.dtNgayLam.TabIndex = 36;
+            this.dtpNgayLam.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayLam.Location = new System.Drawing.Point(101, 163);
+            this.dtpNgayLam.Name = "dtpNgayLam";
+            this.dtpNgayLam.Size = new System.Drawing.Size(267, 20);
+            this.dtpNgayLam.TabIndex = 36;
             // 
             // ThemNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 473);
-            this.Controls.Add(this.dtNgayLam);
-            this.Controls.Add(this.dtNgaySinh);
+            this.Controls.Add(this.dtpNgayLam);
+            this.Controls.Add(this.dtpNgaySinh);
             this.Controls.Add(this.rbNu);
             this.Controls.Add(this.rbNam);
             this.Controls.Add(this.btDong);
@@ -267,7 +269,7 @@
             this.Controls.Add(this.txtCMND);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
-            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.label10);
@@ -297,7 +299,7 @@
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.TextBox txtTaiKhoan;
-        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label10;
@@ -310,7 +312,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtNgaySinh;
-        private System.Windows.Forms.DateTimePicker dtNgayLam;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.DateTimePicker dtpNgayLam;
     }
 }

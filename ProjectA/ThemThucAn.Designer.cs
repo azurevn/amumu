@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDonVi = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
-            this.txtLoai = new System.Windows.Forms.TextBox();
             this.txtTenThucAn = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,6 +39,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btThem = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
+            this.cbbLoai = new System.Windows.Forms.ComboBox();
+            this.qLThucPhamDS = new ProjectA.QLThucPhamDS();
+            this.loaiThucAnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loaiThucAnTableAdapter = new ProjectA.QLThucPhamDSTableAdapters.LoaiThucAnTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.qLThucPhamDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiThucAnBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,13 +71,6 @@
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(281, 20);
             this.txtGia.TabIndex = 21;
-            // 
-            // txtLoai
-            // 
-            this.txtLoai.Location = new System.Drawing.Point(82, 135);
-            this.txtLoai.Name = "txtLoai";
-            this.txtLoai.Size = new System.Drawing.Size(281, 20);
-            this.txtLoai.TabIndex = 22;
             // 
             // txtTenThucAn
             // 
@@ -124,6 +123,7 @@
             this.btThem.TabIndex = 24;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // btXoa
             // 
@@ -131,19 +131,45 @@
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(83, 36);
             this.btXoa.TabIndex = 24;
-            this.btXoa.Text = "Xoá";
+            this.btXoa.Text = "Đóng";
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
+            // 
+            // cbbLoai
+            // 
+            this.cbbLoai.DataSource = this.loaiThucAnBindingSource;
+            this.cbbLoai.DisplayMember = "LoaiThucAn";
+            this.cbbLoai.FormattingEnabled = true;
+            this.cbbLoai.Location = new System.Drawing.Point(82, 135);
+            this.cbbLoai.Name = "cbbLoai";
+            this.cbbLoai.Size = new System.Drawing.Size(281, 21);
+            this.cbbLoai.TabIndex = 25;
+            this.cbbLoai.ValueMember = "MaLoaiThucAn";
+            // 
+            // qLThucPhamDS
+            // 
+            this.qLThucPhamDS.DataSetName = "QLThucPhamDS";
+            this.qLThucPhamDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // loaiThucAnBindingSource
+            // 
+            this.loaiThucAnBindingSource.DataMember = "LoaiThucAn";
+            this.loaiThucAnBindingSource.DataSource = this.qLThucPhamDS;
+            // 
+            // loaiThucAnTableAdapter
+            // 
+            this.loaiThucAnTableAdapter.ClearBeforeFill = true;
             // 
             // ThemThucAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 373);
+            this.Controls.Add(this.cbbLoai);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.txtDonVi);
             this.Controls.Add(this.txtGia);
-            this.Controls.Add(this.txtLoai);
             this.Controls.Add(this.txtTenThucAn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -153,6 +179,9 @@
             this.MaximizeBox = false;
             this.Name = "ThemThucAn";
             this.Text = "Thêm Thức Ăn";
+            this.Load += new System.EventHandler(this.ThemThucAn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.qLThucPhamDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiThucAnBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,7 +192,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDonVi;
         private System.Windows.Forms.TextBox txtGia;
-        private System.Windows.Forms.TextBox txtLoai;
         private System.Windows.Forms.TextBox txtTenThucAn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -171,5 +199,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btXoa;
+        private System.Windows.Forms.ComboBox cbbLoai;
+        private QLThucPhamDS qLThucPhamDS;
+        private System.Windows.Forms.BindingSource loaiThucAnBindingSource;
+        private QLThucPhamDSTableAdapters.LoaiThucAnTableAdapter loaiThucAnTableAdapter;
     }
 }

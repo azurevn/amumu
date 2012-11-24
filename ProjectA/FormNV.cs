@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProjectA
 {
@@ -18,33 +19,8 @@ namespace ProjectA
 
         private void FormNV_Load(object sender, EventArgs e)
         {
-            lvTable.LargeImageList = imageList1;
-
-            ListViewItem b1 = new ListViewItem("Bàn 1", 0);
-            lvTable.Items.Add(b1);
-            ListViewItem b2 = new ListViewItem("Bàn 2", 0);
-            lvTable.Items.Add(b2);
-            ListViewItem b3 = new ListViewItem("Bàn 3", 0);
-            lvTable.Items.Add(b3);
-            ListViewItem b4 = new ListViewItem("Bàn 4", 0);
-            lvTable.Items.Add(b4);
-            ListViewItem b5 = new ListViewItem("Bàn 5", 0);
-            lvTable.Items.Add(b5);
-            ListViewItem b6 = new ListViewItem("Bàn 6", 0);
-            lvTable.Items.Add(b6);
-            ListViewItem b7 = new ListViewItem("Bàn 7", 0);
-            lvTable.Items.Add(b7);
-            ListViewItem b8 = new ListViewItem("Bàn 8", 0);
-            lvTable.Items.Add(b8);
-            ListViewItem b9 = new ListViewItem("Bàn 9", 0);
-            lvTable.Items.Add(b9);
-            ListViewItem b10 = new ListViewItem("Bàn 10", 0);
-            lvTable.Items.Add(b10);
-            ListViewItem b11 = new ListViewItem("Bàn 11", 0);
-            lvTable.Items.Add(b11);
-            ListViewItem b12 = new ListViewItem("Bàn 12", 0);
-            lvTable.Items.Add(b12);
-
+            // TODO: This line of code loads data into the 'nhanVienDS.NhanVien' table. You can move, or remove it, as needed.
+            this.nhanVienTableAdapter.Fill(this.nhanVienDS.NhanVien);
             sttTenNV.Text = "Nhân Viên: " + Session._EmployeeName;
             sttMaNV.Text = "Mã Nhân Viên: " + Session._EmployeeId;
         }
@@ -94,6 +70,49 @@ namespace ProjectA
         {
             About ab = new About();
             ab.Show();
+        }
+
+        private void DataGridView_ChiTietMH()
+        {
+            string connection = (@"Server = .\SQLEXPRESS; Integrated Security = True; Database = QuanLyCafe");
+            SqlConnection cnn = new SqlConnection(connection);
+            if (cnn.State == ConnectionState.Open)
+                cnn.Close();
+            try
+            {
+                cnn.Open();
+                int ID = 0;
+                TreeNode node = tvMenu.SelectedNode;
+                if (node.Name.Equals("NodeKhaiVi"))
+                    ID = 11;
+                else if (node.Name.Equals("NodeMonChinh"))
+                    ID = 12;
+                else if (node.Name.Equals("NodeTrangMieng"))
+                    ID = 13;
+                else if (node.Name.Equals("NodeGiaiKhat"))
+                    ID = 21;
+                else if (node.Name.Equals("NodeCafe"))
+                    ID = 22;
+                else if (node.Name.Equals("NodeNuocEp"))
+                    ID = 23;
+                else if (node.Name.Equals("NodeBia"))
+                    ID = 24;
+                else if (node.Name.Equals("NodeCocktails"))
+                    ID = 25;
+                else if (node.Name.Equals("RootThuocLa"))
+                    ID = 26;
+
+
+                string selectCmd = "Select * from DoAn and DoUong where MaLoaiThucUong = " + ID + " and MaLoaiThucAn = " + ID + "";
+                SqlDataAdapter adap = new SqlDataAdapter(selectCmd, cnn);
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adap);
+                DataTable table = new DataTable();
+                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                adap.Fill(table);
+            }
+            catch
+            {
+            }
         }
     }
 }

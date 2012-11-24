@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblGiaTri = new System.Windows.Forms.Label();
+            this.lblNgay = new System.Windows.Forms.Label();
+            this.lblTenNV = new System.Windows.Forms.Label();
+            this.lblMaNV = new System.Windows.Forms.Label();
+            this.dgChiTietHD = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,24 +50,27 @@
             this.dtPickerTo = new System.Windows.Forms.DateTimePicker();
             this.dtPickerFrom = new System.Windows.Forms.DateTimePicker();
             this.btXemHD = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblMaNV = new System.Windows.Forms.Label();
-            this.lblTenNV = new System.Windows.Forms.Label();
-            this.lblNgay = new System.Windows.Forms.Label();
-            this.lblGiaTri = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblBan = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblSoKhach = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgChiTietHD)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblSoKhach);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.lblBan);
+            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.lblGiaTri);
             this.groupBox2.Controls.Add(this.lblNgay);
             this.groupBox2.Controls.Add(this.lblTenNV);
             this.groupBox2.Controls.Add(this.lblMaNV);
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgChiTietHD);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
@@ -76,10 +84,54 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi Tiết Hoá Đơn";
             // 
+            // lblGiaTri
+            // 
+            this.lblGiaTri.AutoSize = true;
+            this.lblGiaTri.Location = new System.Drawing.Point(485, 109);
+            this.lblGiaTri.Name = "lblGiaTri";
+            this.lblGiaTri.Size = new System.Drawing.Size(35, 13);
+            this.lblGiaTri.TabIndex = 4;
+            this.lblGiaTri.Text = "label9";
+            // 
+            // lblNgay
+            // 
+            this.lblNgay.AutoSize = true;
+            this.lblNgay.Location = new System.Drawing.Point(485, 78);
+            this.lblNgay.Name = "lblNgay";
+            this.lblNgay.Size = new System.Drawing.Size(35, 13);
+            this.lblNgay.TabIndex = 4;
+            this.lblNgay.Text = "label9";
+            // 
+            // lblTenNV
+            // 
+            this.lblTenNV.AutoSize = true;
+            this.lblTenNV.Location = new System.Drawing.Point(115, 109);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(35, 13);
+            this.lblTenNV.TabIndex = 4;
+            this.lblTenNV.Text = "label9";
+            // 
+            // lblMaNV
+            // 
+            this.lblMaNV.AutoSize = true;
+            this.lblMaNV.Location = new System.Drawing.Point(115, 78);
+            this.lblMaNV.Name = "lblMaNV";
+            this.lblMaNV.Size = new System.Drawing.Size(35, 13);
+            this.lblMaNV.TabIndex = 4;
+            this.lblMaNV.Text = "label9";
+            // 
+            // dgChiTietHD
+            // 
+            this.dgChiTietHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgChiTietHD.Location = new System.Drawing.Point(7, 140);
+            this.dgChiTietHD.Name = "dgChiTietHD";
+            this.dgChiTietHD.Size = new System.Drawing.Size(594, 248);
+            this.dgChiTietHD.TabIndex = 3;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(340, 109);
+            this.label6.Location = new System.Drawing.Point(438, 109);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 2;
@@ -88,7 +140,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(340, 78);
+            this.label5.Location = new System.Drawing.Point(438, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 2;
@@ -136,7 +188,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(329, 27);
+            this.label1.Location = new System.Drawing.Point(324, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 33);
             this.label1.TabIndex = 5;
@@ -228,49 +280,41 @@
             this.btXemHD.Text = "Xem";
             this.btXemHD.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // label9
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 140);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(594, 248);
-            this.dataGridView1.TabIndex = 3;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(242, 78);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(29, 13);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Bàn:";
             // 
-            // lblMaNV
+            // lblBan
             // 
-            this.lblMaNV.AutoSize = true;
-            this.lblMaNV.Location = new System.Drawing.Point(115, 78);
-            this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(35, 13);
-            this.lblMaNV.TabIndex = 4;
-            this.lblMaNV.Text = "label9";
+            this.lblBan.AutoSize = true;
+            this.lblBan.Location = new System.Drawing.Point(305, 78);
+            this.lblBan.Name = "lblBan";
+            this.lblBan.Size = new System.Drawing.Size(29, 13);
+            this.lblBan.TabIndex = 5;
+            this.lblBan.Text = "label";
             // 
-            // lblTenNV
+            // label11
             // 
-            this.lblTenNV.AutoSize = true;
-            this.lblTenNV.Location = new System.Drawing.Point(115, 109);
-            this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(35, 13);
-            this.lblTenNV.TabIndex = 4;
-            this.lblTenNV.Text = "label9";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(242, 109);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 13);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Số Khách:";
             // 
-            // lblNgay
+            // lblSoKhach
             // 
-            this.lblNgay.AutoSize = true;
-            this.lblNgay.Location = new System.Drawing.Point(395, 78);
-            this.lblNgay.Name = "lblNgay";
-            this.lblNgay.Size = new System.Drawing.Size(35, 13);
-            this.lblNgay.TabIndex = 4;
-            this.lblNgay.Text = "label9";
-            // 
-            // lblGiaTri
-            // 
-            this.lblGiaTri.AutoSize = true;
-            this.lblGiaTri.Location = new System.Drawing.Point(395, 109);
-            this.lblGiaTri.Name = "lblGiaTri";
-            this.lblGiaTri.Size = new System.Drawing.Size(35, 13);
-            this.lblGiaTri.TabIndex = 4;
-            this.lblGiaTri.Text = "label9";
+            this.lblSoKhach.AutoSize = true;
+            this.lblSoKhach.Location = new System.Drawing.Point(305, 109);
+            this.lblSoKhach.Name = "lblSoKhach";
+            this.lblSoKhach.Size = new System.Drawing.Size(29, 13);
+            this.lblSoKhach.TabIndex = 5;
+            this.lblSoKhach.Text = "label";
             // 
             // QuanLyHoaDon
             // 
@@ -286,10 +330,10 @@
             this.Text = "Quản Lý Hoá Đơn";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgChiTietHD)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,7 +342,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgChiTietHD;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -319,5 +363,9 @@
         private System.Windows.Forms.Label lblGiaTri;
         private System.Windows.Forms.Label lblNgay;
         private System.Windows.Forms.Label lblTenNV;
+        private System.Windows.Forms.Label lblSoKhach;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblBan;
+        private System.Windows.Forms.Label label9;
     }
 }

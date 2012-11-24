@@ -44,7 +44,7 @@
             this.dtpNgayLam = new System.Windows.Forms.DateTimePicker();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.btCapNhat = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbSex = new System.Windows.Forms.ComboBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
@@ -89,6 +89,7 @@
             this.listBoxNhanVien.Name = "listBoxNhanVien";
             this.listBoxNhanVien.Size = new System.Drawing.Size(229, 459);
             this.listBoxNhanVien.TabIndex = 0;
+            this.listBoxNhanVien.SelectedIndexChanged += new System.EventHandler(this.listBoxNhanVien_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -172,7 +173,7 @@
             this.groupBox2.Controls.Add(this.dtpNgayLam);
             this.groupBox2.Controls.Add(this.dtpNgaySinh);
             this.groupBox2.Controls.Add(this.btCapNhat);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cbbSex);
             this.groupBox2.Controls.Add(this.txtCMND);
             this.groupBox2.Controls.Add(this.txtSDT);
             this.groupBox2.Controls.Add(this.txtMatKhau);
@@ -221,17 +222,18 @@
             this.btCapNhat.TabIndex = 5;
             this.btCapNhat.Text = "Cập Nhật";
             this.btCapNhat.UseVisualStyleBackColor = true;
+            this.btCapNhat.Click += new System.EventHandler(this.btCapNhat_Click);
             // 
-            // comboBox1
+            // cbbSex
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbbSex.FormattingEnabled = true;
+            this.cbbSex.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.comboBox1.Location = new System.Drawing.Point(356, 245);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(142, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbbSex.Location = new System.Drawing.Point(356, 245);
+            this.cbbSex.Name = "cbbSex";
+            this.cbbSex.Size = new System.Drawing.Size(142, 21);
+            this.cbbSex.TabIndex = 4;
             // 
             // txtCMND
             // 
@@ -318,6 +320,7 @@
             this.btXoa.TabIndex = 0;
             this.btXoa.Text = "Xoá";
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btThem
             // 
@@ -327,6 +330,7 @@
             this.btThem.TabIndex = 0;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // btDong
             // 
@@ -336,6 +340,7 @@
             this.btDong.TabIndex = 0;
             this.btDong.Text = "Đóng";
             this.btDong.UseVisualStyleBackColor = true;
+            this.btDong.Click += new System.EventHandler(this.btDong_Click);
             // 
             // QuanLyNhanVien
             // 
@@ -350,6 +355,7 @@
             this.MaximizeBox = false;
             this.Name = "QuanLyNhanVien";
             this.Text = "Quản Lý Nhân Viên";
+            this.Load += new System.EventHandler(this.QuanLyNhanVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -380,7 +386,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btCapNhat;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbSex;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
