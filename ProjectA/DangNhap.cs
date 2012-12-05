@@ -12,45 +12,43 @@ namespace DoAnB
 {
     public partial class DangNhap : Form
     {
+        bool isQuanLy = false;
         public DangNhap()
         {
             InitializeComponent();
+            label2tk.Hide();
+            label3mk.Hide();
+            txtMatKhau.Hide();
+            txtTaiKhoan.Hide();
+            labelxinchao.Hide();
+            btDangNhap.Hide();
         }
 
         private void btDangNhap_Click(object sender, EventArgs e)
         {
-            bool check;
-            if (rbQuanLy.Checked || rbNhanVien.Checked)
-                check = true;
-            else
-                check = false;
-
-            if (check == false)
-            {
-                MessageBox.Show("Vui lòng chọn chức vụ");
-            }
-            else if (txtTaiKhoan.Text == "")
+          
+            if (txtTaiKhoan.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập tên tài khoản");
+                txtTaiKhoan.Focus();
             }
             else if (txtMatKhau.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập mật khẩu");
+                txtMatKhau.Focus();
             }
 
             else
             {
-                string connection = (@"Server = .\SQLEXPRESS; Integrated Security = True; Database = QuanLyCafe");
-                SqlConnection con = new SqlConnection(connection);
-                if (con.State == ConnectionState.Closed)
-                    con.Open();
+                ketnoi data = new ketnoi();
+               
 
-                if (rbQuanLy.Checked)
+                if (isQuanLy)
                 {
                     try
                     {
-                        SqlCommand cmd = new SqlCommand("Select * From QuanLy Where TaiKhoan = '" + txtTaiKhoan.Text + "' And MatKhau = '" + txtMatKhau.Text + "'", con);
-                        SqlDataReader reader = cmd.ExecuteReader();
+                       
+                        SqlDataReader reader = data.ExecuteReader("Select * From QuanLy Where TaiKhoan = '" + txtTaiKhoan.Text + "' And MatKhau = '" + txtMatKhau.Text + "'");
 
                         if (reader.Read())
                         {
@@ -65,7 +63,7 @@ namespace DoAnB
                             MessageBox.Show("Thông tin quản lý không đúng, vui lòng kiểm tra lại");
                         }
                         reader.Close();
-                        con.Close();
+                        data.disconnect();
                     }
                     catch (Exception ex)
                     {
@@ -73,12 +71,12 @@ namespace DoAnB
                     }
                 }
 
-                else if (rbNhanVien.Checked)
+                else
                 {
                     try
                     {
-                        SqlCommand cmd = new SqlCommand("Select * From NhanVien Where TaiKhoan = '" + txtTaiKhoan.Text + "' And MatKhau = '" + txtMatKhau.Text + "'", con);
-                        SqlDataReader reader = cmd.ExecuteReader();
+                        
+                        SqlDataReader reader = data.ExecuteReader("Select * From NhanVien Where TaiKhoan = '" + txtTaiKhoan.Text + "' And MatKhau = '" + txtMatKhau.Text + "'");
 
                         if (reader.Read())
                         {
@@ -93,7 +91,7 @@ namespace DoAnB
                             MessageBox.Show("Thông tin nhân viên không đúng, vui lòng kiểm tra lại");
                         }
                         reader.Close();
-                        con.Close();
+                        data.disconnect();
                     }
                     catch (Exception ex)
                     {
@@ -106,6 +104,37 @@ namespace DoAnB
         private void btExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void quanlybtn_Click(object sender, EventArgs e)
+        {
+            isQuanLy = true;
+
+            label2tk.Show();
+            label3mk.Show();
+            txtMatKhau.Show();
+            txtTaiKhoan.Show();
+
+            labelxinchao.Text = "Mời quản lý đăng nhập";
+            labelxinchao.Show();
+            btDangNhap.Show();
+            txtTaiKhoan.Focus();
+           
+        }
+
+        private void nhanvienbtn_Click(object sender, EventArgs e)
+        {
+            isQuanLy = false;
+            label2tk.Show();
+            label3mk.Show();
+            txtMatKhau.Show();
+            txtTaiKhoan.Show();
+            txtTaiKhoan.Focus();
+
+            labelxinchao.Text = "Mời nhân viên đăng nhập";
+            labelxinchao.Show();
+            btDangNhap.Show();
+
         }
     }
 }

@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhap));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.rbQuanLy = new System.Windows.Forms.RadioButton();
-            this.rbNhanVien = new System.Windows.Forms.RadioButton();
+            this.labelxinchao = new System.Windows.Forms.Label();
+            this.label2tk = new System.Windows.Forms.Label();
+            this.label3mk = new System.Windows.Forms.Label();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btDangNhap = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
+            this.quanlybtn = new System.Windows.Forms.Button();
+            this.nhanvienbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,110 +47,111 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(380, 262);
+            this.pictureBox1.Size = new System.Drawing.Size(380, 196);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // labelxinchao
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 290);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Chức Vụ:";
+            this.labelxinchao.AutoSize = true;
+            this.labelxinchao.Location = new System.Drawing.Point(97, 296);
+            this.labelxinchao.Name = "labelxinchao";
+            this.labelxinchao.Size = new System.Drawing.Size(51, 13);
+            this.labelxinchao.TabIndex = 1;
+            this.labelxinchao.Text = "Chức Vụ:";
             // 
-            // label2
+            // label2tk
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 326);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tài Khoản::";
+            this.label2tk.AutoSize = true;
+            this.label2tk.Location = new System.Drawing.Point(30, 323);
+            this.label2tk.Name = "label2tk";
+            this.label2tk.Size = new System.Drawing.Size(59, 13);
+            this.label2tk.TabIndex = 1;
+            this.label2tk.Text = "Tài Khoản:";
             // 
-            // label3
+            // label3mk
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 361);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Mật Khẩu::";
-            // 
-            // rbQuanLy
-            // 
-            this.rbQuanLy.AutoSize = true;
-            this.rbQuanLy.Location = new System.Drawing.Point(100, 288);
-            this.rbQuanLy.Name = "rbQuanLy";
-            this.rbQuanLy.Size = new System.Drawing.Size(68, 17);
-            this.rbQuanLy.TabIndex = 2;
-            this.rbQuanLy.TabStop = true;
-            this.rbQuanLy.Text = "Quản Lý:";
-            this.rbQuanLy.UseVisualStyleBackColor = true;
-            // 
-            // rbNhanVien
-            // 
-            this.rbNhanVien.AutoSize = true;
-            this.rbNhanVien.Location = new System.Drawing.Point(232, 288);
-            this.rbNhanVien.Name = "rbNhanVien";
-            this.rbNhanVien.Size = new System.Drawing.Size(78, 17);
-            this.rbNhanVien.TabIndex = 2;
-            this.rbNhanVien.TabStop = true;
-            this.rbNhanVien.Text = "Nhân Viên:";
-            this.rbNhanVien.UseVisualStyleBackColor = true;
+            this.label3mk.AutoSize = true;
+            this.label3mk.Location = new System.Drawing.Point(29, 358);
+            this.label3mk.Name = "label3mk";
+            this.label3mk.Size = new System.Drawing.Size(56, 13);
+            this.label3mk.TabIndex = 1;
+            this.label3mk.Text = "Mật Khẩu:";
             // 
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.Location = new System.Drawing.Point(100, 323);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(250, 20);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(153, 20);
             this.txtTaiKhoan.TabIndex = 3;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(100, 358);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(250, 20);
-            this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.Size = new System.Drawing.Size(153, 20);
+            this.txtMatKhau.TabIndex = 4;
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // btDangNhap
             // 
-            this.btDangNhap.Location = new System.Drawing.Point(172, 398);
+            this.btDangNhap.Location = new System.Drawing.Point(275, 320);
             this.btDangNhap.Name = "btDangNhap";
-            this.btDangNhap.Size = new System.Drawing.Size(75, 23);
-            this.btDangNhap.TabIndex = 4;
+            this.btDangNhap.Size = new System.Drawing.Size(75, 54);
+            this.btDangNhap.TabIndex = 5;
             this.btDangNhap.Text = "Đăng Nhập";
             this.btDangNhap.UseVisualStyleBackColor = true;
             this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);
             // 
             // btExit
             // 
-            this.btExit.Location = new System.Drawing.Point(275, 398);
+            this.btExit.Location = new System.Drawing.Point(275, 219);
             this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(75, 23);
-            this.btExit.TabIndex = 4;
+            this.btExit.Size = new System.Drawing.Size(75, 54);
+            this.btExit.TabIndex = 2;
             this.btExit.Text = "Thoát";
             this.btExit.UseVisualStyleBackColor = true;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
+            // quanlybtn
+            // 
+            this.quanlybtn.Location = new System.Drawing.Point(33, 219);
+            this.quanlybtn.Name = "quanlybtn";
+            this.quanlybtn.Size = new System.Drawing.Size(75, 54);
+            this.quanlybtn.TabIndex = 0;
+            this.quanlybtn.Text = "Quản Lý";
+            this.quanlybtn.UseVisualStyleBackColor = true;
+            this.quanlybtn.Click += new System.EventHandler(this.quanlybtn_Click);
+            // 
+            // nhanvienbtn
+            // 
+            this.nhanvienbtn.Location = new System.Drawing.Point(155, 219);
+            this.nhanvienbtn.Name = "nhanvienbtn";
+            this.nhanvienbtn.Size = new System.Drawing.Size(75, 54);
+            this.nhanvienbtn.TabIndex = 1;
+            this.nhanvienbtn.Text = "Nhân Viên";
+            this.nhanvienbtn.UseVisualStyleBackColor = true;
+            this.nhanvienbtn.Click += new System.EventHandler(this.nhanvienbtn_Click);
+            // 
             // DangNhap
             // 
+            this.AcceptButton = this.btDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 444);
+            this.CancelButton = this.btExit;
+            this.ClientSize = new System.Drawing.Size(379, 397);
+            this.Controls.Add(this.nhanvienbtn);
+            this.Controls.Add(this.quanlybtn);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.btDangNhap);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
-            this.Controls.Add(this.rbNhanVien);
-            this.Controls.Add(this.rbQuanLy);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3mk);
+            this.Controls.Add(this.label2tk);
+            this.Controls.Add(this.labelxinchao);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DangNhap";
@@ -164,14 +165,14 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton rbQuanLy;
-        private System.Windows.Forms.RadioButton rbNhanVien;
+        private System.Windows.Forms.Label labelxinchao;
+        private System.Windows.Forms.Label label2tk;
+        private System.Windows.Forms.Label label3mk;
         private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btDangNhap;
         private System.Windows.Forms.Button btExit;
+        private System.Windows.Forms.Button quanlybtn;
+        private System.Windows.Forms.Button nhanvienbtn;
     }
 }
