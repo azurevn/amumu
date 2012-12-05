@@ -204,6 +204,7 @@
             // 
             // LogOutToolStripMenuItem
             // 
+            this.LogOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("LogOutToolStripMenuItem.Image")));
             this.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem";
             this.LogOutToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.LogOutToolStripMenuItem.Text = "Đăng Xuất";
@@ -211,6 +212,7 @@
             // 
             // ExitToolStripMenuItem
             // 
+            this.ExitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ExitToolStripMenuItem.Image")));
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
             this.ExitToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.ExitToolStripMenuItem.Text = "Thoát";
@@ -228,6 +230,7 @@
             // 
             // TKThangToolStripMenuItem
             // 
+            this.TKThangToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("TKThangToolStripMenuItem.Image")));
             this.TKThangToolStripMenuItem.Name = "TKThangToolStripMenuItem";
             this.TKThangToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.TKThangToolStripMenuItem.Text = "Theo Tháng";
@@ -235,6 +238,7 @@
             // 
             // TKNamToolStripMenuItem
             // 
+            this.TKNamToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("TKNamToolStripMenuItem.Image")));
             this.TKNamToolStripMenuItem.Name = "TKNamToolStripMenuItem";
             this.TKNamToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.TKNamToolStripMenuItem.Text = "Theo Năm";
@@ -252,6 +256,7 @@
             // 
             // LienHeToolStripMenuItem
             // 
+            this.LienHeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("LienHeToolStripMenuItem.Image")));
             this.LienHeToolStripMenuItem.Name = "LienHeToolStripMenuItem";
             this.LienHeToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.LienHeToolStripMenuItem.Text = "Liên Hệ";
@@ -259,6 +264,7 @@
             // 
             // AboutToolStripMenuItem
             // 
+            this.AboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AboutToolStripMenuItem.Image")));
             this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
             this.AboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.AboutToolStripMenuItem.Text = "About";
@@ -338,7 +344,7 @@
             this.cbbTenNV.DataSource = this.nhanVienBindingSource;
             this.cbbTenNV.DisplayMember = "TenNV";
             this.cbbTenNV.FormattingEnabled = true;
-            this.cbbTenNV.Location = new System.Drawing.Point(146, 43);
+            this.cbbTenNV.Location = new System.Drawing.Point(112, 38);
             this.cbbTenNV.Margin = new System.Windows.Forms.Padding(4);
             this.cbbTenNV.Name = "cbbTenNV";
             this.cbbTenNV.Size = new System.Drawing.Size(247, 21);
@@ -516,6 +522,7 @@
             this.btThanhToan.TabIndex = 26;
             this.btThanhToan.Text = "Thanh Toán";
             this.btThanhToan.UseVisualStyleBackColor = true;
+            this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click);
             // 
             // btIn
             // 
@@ -760,7 +767,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main";
             this.Text = "Amumu -  Phần mềm quản lý quán cafe, quán ăn";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormNV_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

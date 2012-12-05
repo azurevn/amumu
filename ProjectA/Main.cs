@@ -125,7 +125,8 @@ namespace DoAnB
 
         private void btChuyenBan_Click(object sender, EventArgs e)
         {
-
+            fchuyenban f = new fchuyenban();
+            f.ShowDialog();
         }
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -147,6 +148,11 @@ namespace DoAnB
         }
 
         private void btGopBan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btThanhToan_Click(object sender, EventArgs e)
         {
 
         }
