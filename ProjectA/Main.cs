@@ -15,6 +15,14 @@ namespace DoAnB
         public Main()
         {
             InitializeComponent();
+            if (!Session._isAdmin)
+            {
+                quanlyToolStripMenuItem.Visible = false;
+
+            
+            }
+            
+            
         }
 
         private void FormNV_Load(object sender, EventArgs e)
@@ -116,6 +124,29 @@ namespace DoAnB
         }
 
         private void btChuyenBan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyNhanVien qlnv = new QuanLyNhanVien();
+            qlnv.Show();
+        }
+
+        private void thựcPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyThucPham qlta = new QuanLyThucPham();
+            qlta.Show();
+        }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyHoaDon qlhd = new QuanLyHoaDon();
+            qlhd.Show();
+        }
+
+        private void btGopBan_Click(object sender, EventArgs e)
         {
 
         }
