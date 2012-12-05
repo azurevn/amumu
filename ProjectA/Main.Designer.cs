@@ -1,6 +1,6 @@
 ﻿namespace DoAnB
 {
-    partial class FormNV
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Bàn 1", 0);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Bàn 2", 0);
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Bàn 3", 0);
@@ -44,7 +45,6 @@
             System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("Bàn 14", 0);
             System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("Bàn 14", 0);
             System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("Bàn 15", 0);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNV));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Khai Vị");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Món Chính");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Tráng Miệng");
@@ -130,7 +130,7 @@
             // lblTable
             // 
             this.lblTable.AutoSize = true;
-            this.lblTable.Location = new System.Drawing.Point(6, 28);
+            this.lblTable.Location = new System.Drawing.Point(17, 22);
             this.lblTable.Name = "lblTable";
             this.lblTable.Size = new System.Drawing.Size(35, 13);
             this.lblTable.TabIndex = 4;
@@ -187,21 +187,22 @@
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LogOutToolStripMenuItem,
             this.ExitToolStripMenuItem});
+            this.menuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("menuToolStripMenuItem.Image")));
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.menuToolStripMenuItem.Text = "Hệ Thống";
             // 
             // LogOutToolStripMenuItem
             // 
             this.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem";
-            this.LogOutToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.LogOutToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.LogOutToolStripMenuItem.Text = "Đăng Xuất";
             this.LogOutToolStripMenuItem.Click += new System.EventHandler(this.LogOutToolStripMenuItem_Click);
             // 
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.ExitToolStripMenuItem.Text = "Thoát";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -210,21 +211,22 @@
             this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TKThangToolStripMenuItem,
             this.TKNamToolStripMenuItem});
+            this.thốngKêToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thốngKêToolStripMenuItem.Image")));
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống Kê";
             // 
             // TKThangToolStripMenuItem
             // 
             this.TKThangToolStripMenuItem.Name = "TKThangToolStripMenuItem";
-            this.TKThangToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.TKThangToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.TKThangToolStripMenuItem.Text = "Theo Tháng";
             this.TKThangToolStripMenuItem.Click += new System.EventHandler(this.TKThangToolStripMenuItem_Click);
             // 
             // TKNamToolStripMenuItem
             // 
             this.TKNamToolStripMenuItem.Name = "TKNamToolStripMenuItem";
-            this.TKNamToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.TKNamToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.TKNamToolStripMenuItem.Text = "Theo Năm";
             this.TKNamToolStripMenuItem.Click += new System.EventHandler(this.TKNamToolStripMenuItem_Click);
             // 
@@ -233,21 +235,22 @@
             this.ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LienHeToolStripMenuItem,
             this.AboutToolStripMenuItem});
+            this.ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem.Image")));
             this.ToolStripMenuItem.Name = "ToolStripMenuItem";
-            this.ToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.ToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.ToolStripMenuItem.Text = "Trợ Giúp";
             // 
             // LienHeToolStripMenuItem
             // 
             this.LienHeToolStripMenuItem.Name = "LienHeToolStripMenuItem";
-            this.LienHeToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.LienHeToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.LienHeToolStripMenuItem.Text = "Liên Hệ";
             this.LienHeToolStripMenuItem.Click += new System.EventHandler(this.LienHeToolStripMenuItem_Click);
             // 
             // AboutToolStripMenuItem
             // 
             this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
-            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.AboutToolStripMenuItem.Text = "About";
             this.AboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -481,13 +484,13 @@
             // sttMaNV
             // 
             this.sttMaNV.Name = "sttMaNV";
-            this.sttMaNV.Size = new System.Drawing.Size(34, 17);
+            this.sttMaNV.Size = new System.Drawing.Size(40, 17);
             this.sttMaNV.Text = "MaNV";
             // 
             // sttTenNV
             // 
             this.sttTenNV.Name = "sttTenNV";
-            this.sttTenNV.Size = new System.Drawing.Size(38, 17);
+            this.sttTenNV.Size = new System.Drawing.Size(43, 17);
             this.sttTenNV.Text = "TenNV";
             // 
             // btChuyenBan
@@ -498,6 +501,7 @@
             this.btChuyenBan.TabIndex = 27;
             this.btChuyenBan.Text = "Chuyển Bàn";
             this.btChuyenBan.UseVisualStyleBackColor = true;
+            this.btChuyenBan.Click += new System.EventHandler(this.btChuyenBan_Click);
             // 
             // cbbSoLuong
             // 
@@ -643,7 +647,7 @@
             this.dgMatHang.Size = new System.Drawing.Size(343, 296);
             this.dgMatHang.TabIndex = 41;
             // 
-            // FormNV
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -663,8 +667,9 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btChuyenBan);
             this.Controls.Add(this.cbbSoLuong);
-            this.Name = "FormNV";
-            this.Text = "Quản Lý Cafe - Nhân Viên";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Main";
+            this.Text = "Amumu Ver 1.0";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormNV_Load);
             this.menuStrip1.ResumeLayout(false);

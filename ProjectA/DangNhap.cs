@@ -41,8 +41,6 @@ namespace DoAnB
             else
             {
                 ketnoi data = new ketnoi();
-               
-
                 if (isQuanLy)
                 {
                     try
@@ -81,7 +79,7 @@ namespace DoAnB
                         if (reader.Read())
                         {
                             Session.set(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString());
-                            FormNV nv = new FormNV();
+                            Main nv = new Main();
                             nv.Show();
                             this.Hide();
                         }

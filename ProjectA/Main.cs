@@ -10,9 +10,9 @@ using System.Data.SqlClient;
 
 namespace DoAnB
 {
-    public partial class FormNV : Form
+    public partial class Main : Form
     {
-        public FormNV()
+        public Main()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace DoAnB
         private void FormNV_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nhanVienDS.NhanVien' table. You can move, or remove it, as needed.
-            this.nhanVienTableAdapter.Fill(this.nhanVienDS.NhanVien);
+            //this.nhanVienTableAdapter.Fill(this.nhanVienDS.NhanVien)
             sttTenNV.Text = "Nhân Viên: " + Session._EmployeeName;
             sttMaNV.Text = "Mã Nhân Viên: " + Session._EmployeeId;
         }
@@ -113,6 +113,11 @@ namespace DoAnB
             catch
             {
             }
+        }
+
+        private void btChuyenBan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
