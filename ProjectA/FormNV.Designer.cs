@@ -1,4 +1,4 @@
-﻿namespace ProjectA
+﻿namespace DoAnB
 {
     partial class FormNV
     {
@@ -84,7 +84,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbbTenNV = new System.Windows.Forms.ComboBox();
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nhanVienDS = new ProjectA.NhanVienDS();
+            this.nhanVienDS = new DoAnB.NhanVienDS();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTongCong = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -113,7 +113,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tvMenu = new System.Windows.Forms.TreeView();
             this.nhanVienDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nhanVienTableAdapter = new ProjectA.NhanVienDSTableAdapters.NhanVienTableAdapter();
+            this.nhanVienTableAdapter = new DoAnB.NhanVienDSTableAdapters.NhanVienTableAdapter();
             this.dgMatHang = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();

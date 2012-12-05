@@ -8,8 +8,8 @@
     <ProjectGuid>{0A05C4EB-666E-4E96-B294-15EC01EF019E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProjectA</RootNamespace>
-    <AssemblyName>ProjectA</AssemblyName>
+    <RootNamespace>DoAnB</RootNamespace>
+    <AssemblyName>DoAnChuyenNganhB</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -32,6 +32,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>amumu-icon-azure3.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -163,6 +166,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QuanLyHoaDon.resx">
       <DependentUpon>QuanLyHoaDon.cs</DependentUpon>
@@ -223,6 +227,9 @@
     <None Include="QLThucPhamDS.xss">
       <DependentUpon>QLThucPhamDS.xsd</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="amumu-icon-azure3.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

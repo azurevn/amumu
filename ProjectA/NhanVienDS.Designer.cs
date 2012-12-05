@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace ProjectA {
+namespace DoAnB {
     
     
     /// <summary>
@@ -980,7 +980,7 @@ namespace ProjectA {
         }
     }
 }
-namespace ProjectA.NhanVienDSTableAdapters {
+namespace DoAnB.NhanVienDSTableAdapters {
     
     
     /// <summary>
@@ -1192,7 +1192,7 @@ SELECT MaNV, TenNV, NgaySinh, DiaChi, CMND, GioiTinh, TaiKhoan, MatKhau, SoDienT
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjectA.Properties.Settings.Default.QuanLyCafeConnectionString;
+            this._connection.ConnectionString = global::DoAnB.Properties.Settings.Default.QuanLyCafeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

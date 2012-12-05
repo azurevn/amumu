@@ -1,4 +1,4 @@
-﻿namespace ProjectA
+﻿namespace DoAnB
 {
     partial class QuanLyNhanVien
     {

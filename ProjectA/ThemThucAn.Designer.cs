@@ -1,4 +1,4 @@
-﻿namespace ProjectA
+﻿namespace DoAnB
 {
     partial class ThemThucAn
     {
@@ -40,9 +40,9 @@
             this.btThem = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.cbbLoai = new System.Windows.Forms.ComboBox();
-            this.qLThucPhamDS = new ProjectA.QLThucPhamDS();
+            this.qLThucPhamDS = new DoAnB.QLThucPhamDS();
             this.loaiThucAnBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loaiThucAnTableAdapter = new ProjectA.QLThucPhamDSTableAdapters.LoaiThucAnTableAdapter();
+            this.loaiThucAnTableAdapter = new DoAnB.QLThucPhamDSTableAdapters.LoaiThucAnTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.qLThucPhamDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiThucAnBindingSource)).BeginInit();
             this.SuspendLayout();

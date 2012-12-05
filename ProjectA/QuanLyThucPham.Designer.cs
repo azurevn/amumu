@@ -1,4 +1,4 @@
-﻿namespace ProjectA
+﻿namespace DoAnB
 {
     partial class QuanLyThucPham
     {
@@ -44,7 +44,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbLoaiThucAn = new System.Windows.Forms.ComboBox();
-            this.qLThucPhamDS = new ProjectA.QLThucPhamDS();
+            this.qLThucPhamDS = new DoAnB.QLThucPhamDS();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.bttDongTU = new System.Windows.Forms.Button();
@@ -63,9 +63,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.loaiThucAnBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loaiThucAnTableAdapter1 = new ProjectA.QLThucPhamDSTableAdapters.LoaiThucAnTableAdapter();
+            this.loaiThucAnTableAdapter1 = new DoAnB.QLThucPhamDSTableAdapters.LoaiThucAnTableAdapter();
             this.loaiThucUongBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loaiThucUongTableAdapter2 = new ProjectA.QLThucPhamDSTableAdapters.LoaiThucUongTableAdapter();
+            this.loaiThucUongTableAdapter2 = new DoAnB.QLThucPhamDSTableAdapters.LoaiThucUongTableAdapter();
             this.tctrlThucPham.SuspendLayout();
             this.tpThucAn.SuspendLayout();
             this.groupBox2.SuspendLayout();

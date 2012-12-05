@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace ProjectA
+namespace DoAnB
 {
     public partial class QuanLyHoaDon : Form
     {

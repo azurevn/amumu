@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace ProjectA {
+namespace DoAnB {
     
     
     /// <summary>
@@ -1038,7 +1038,7 @@ namespace ProjectA {
         }
     }
 }
-namespace ProjectA.QLThucPhamDSTableAdapters {
+namespace DoAnB.QLThucPhamDSTableAdapters {
     
     
     /// <summary>
@@ -1196,7 +1196,7 @@ SELECT MaLoaiThucAn, LoaiThucAn FROM LoaiThucAn WHERE (MaLoaiThucAn = @MaLoaiThu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjectA.Properties.Settings.Default.QuanLyCafeConnectionString;
+            this._connection.ConnectionString = global::DoAnB.Properties.Settings.Default.QuanLyCafeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1521,7 +1521,7 @@ SELECT MaLoaiThucUong, LoaiThucUong FROM LoaiThucUong WHERE (MaLoaiThucUong = @M
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjectA.Properties.Settings.Default.QuanLyCafeConnectionString;
+            this._connection.ConnectionString = global::DoAnB.Properties.Settings.Default.QuanLyCafeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

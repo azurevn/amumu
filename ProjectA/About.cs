@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ProjectA
+namespace DoAnB
 {
     public partial class About : Form
     {

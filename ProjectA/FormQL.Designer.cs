@@ -1,4 +1,4 @@
-﻿namespace ProjectA
+﻿namespace DoAnB
 {
     partial class FormQL
     {
@@ -96,7 +96,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbbTenNV = new System.Windows.Forms.ComboBox();
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nhanVienDS = new ProjectA.NhanVienDS();
+            this.nhanVienDS = new DoAnB.NhanVienDS();
             this.label4 = new System.Windows.Forms.Label();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -118,7 +118,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.nhanVienTableAdapter = new ProjectA.NhanVienDSTableAdapters.NhanVienTableAdapter();
+            this.nhanVienTableAdapter = new DoAnB.NhanVienDSTableAdapters.NhanVienTableAdapter();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
