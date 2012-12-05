@@ -14,12 +14,14 @@ namespace DoAnB
         public FormQL()
         {
             InitializeComponent();
+            quảnLýToolStripMenuItem.Visible = false;
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nhanVienDS.NhanVien' table. You can move, or remove it, as needed.
-            this.nhanVienTableAdapter.Fill(this.nhanVienDS.NhanVien);
+            //this.nhanVienTableAdapter.Fill(this.nhanVienDS.NhanVien);
 
             sttTenNV.Text = "Quản Lý: " + Session._EmployeeName;
             sttMaNV.Text = "Mã Quản Lý: " + Session._EmployeeId;
