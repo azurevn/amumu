@@ -50,9 +50,9 @@ namespace DoAnB
 
                         if (reader.Read())
                         {
-                            Session.set(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString());
-                            FormQL ql = new FormQL();
-                            ql.Show();
+                            Session.set(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(),true);
+                            Main f = new Main();
+                            f.Show();
                             this.Hide();
                         }
 
@@ -78,9 +78,9 @@ namespace DoAnB
 
                         if (reader.Read())
                         {
-                            Session.set(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString());
-                            Main nv = new Main();
-                            nv.Show();
+                            Session.set(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(),false);
+                            Main f = new Main();
+                            f.Show();
                             this.Hide();
                         }
 
