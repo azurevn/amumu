@@ -10,9 +10,9 @@ using System.Data.SqlClient;
 
 namespace DoAnB
 {
-    public partial class ThemThucAn : Form
+    public partial class ThemThucPham : Form
     {
-        public ThemThucAn()
+        public ThemThucPham()
         {
             InitializeComponent();
         }
@@ -83,11 +83,10 @@ namespace DoAnB
 
         private void ThemThucAn_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLThucPhamDS.LoaiThucAn' table. You can move, or remove it, as needed.
-            this.loaiThucAnTableAdapter.Fill(this.qLThucPhamDS.LoaiThucAn);
-            // TODO: This line of code loads data into the 'qLThucPhamDS.LoaiThucAn' table. You can move, or remove it, as needed.
-            this.loaiThucAnTableAdapter.Fill(this.qLThucPhamDS.LoaiThucAn);
+            // TODO: This line of code loads data into the 'quanLyThucPhamDS.LoaiThucPham' table. You can move, or remove it, as needed.
+            this.loaiThucPhamTableAdapter.Fill(this.quanLyThucPhamDS.LoaiThucPham);
 
         }
+
     }
 }

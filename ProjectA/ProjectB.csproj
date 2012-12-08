@@ -82,17 +82,12 @@
     <Compile Include="fchuyenban.Designer.cs">
       <DependentUpon>fchuyenban.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormQL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormQL.Designer.cs">
-      <DependentUpon>FormQL.cs</DependentUpon>
     </Compile>
     <Compile Include="ketnoi.cs" />
     <Compile Include="LienHe.cs">
@@ -108,10 +103,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLThucPhamDS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLThucPhamDS.xsd</DependentUpon>
+    <Compile Include="QLThucPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLThucPham.Designer.cs">
+      <DependentUpon>QLThucPham.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyHoaDon.cs">
       <SubType>Form</SubType>
@@ -125,17 +121,10 @@
     <Compile Include="QuanLyNhanVien.Designer.cs">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyThucPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyThucPham.Designer.cs">
-      <DependentUpon>QuanLyThucPham.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLyThucUong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyThucUong.Designer.cs">
-      <DependentUpon>QuanLyThucUong.cs</DependentUpon>
+    <Compile Include="QuanLyThucPhamDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThucPhamDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Session.cs" />
     <Compile Include="ThemNV.cs">
@@ -144,17 +133,11 @@
     <Compile Include="ThemNV.Designer.cs">
       <DependentUpon>ThemNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThemThucAn.cs">
+    <Compile Include="ThemThucPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThemThucAn.Designer.cs">
-      <DependentUpon>ThemThucAn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThemThucUong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ThemThucUong.Designer.cs">
-      <DependentUpon>ThemThucUong.cs</DependentUpon>
+    <Compile Include="ThemThucPham.Designer.cs">
+      <DependentUpon>ThemThucPham.cs</DependentUpon>
     </Compile>
     <Compile Include="TKNam.cs">
       <SubType>Form</SubType>
@@ -180,9 +163,6 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQL.resx">
-      <DependentUpon>FormQL.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LienHe.resx">
       <DependentUpon>LienHe.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,26 +176,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QLThucPham.resx">
+      <DependentUpon>QLThucPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyHoaDon.resx">
       <DependentUpon>QuanLyHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyThucPham.resx">
-      <DependentUpon>QuanLyThucPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyThucUong.resx">
-      <DependentUpon>QuanLyThucUong.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ThemNV.resx">
       <DependentUpon>ThemNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThemThucAn.resx">
-      <DependentUpon>ThemThucAn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThemThucUong.resx">
-      <DependentUpon>ThemThucUong.cs</DependentUpon>
+    <EmbeddedResource Include="ThemThucPham.resx">
+      <DependentUpon>ThemThucPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TKNam.resx">
       <DependentUpon>TKNam.cs</DependentUpon>
@@ -244,16 +218,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QLThucPhamDS.xsc">
-      <DependentUpon>QLThucPhamDS.xsd</DependentUpon>
+    <None Include="QuanLyThucPhamDS.xsc">
+      <DependentUpon>QuanLyThucPhamDS.xsd</DependentUpon>
     </None>
-    <None Include="QLThucPhamDS.xsd">
+    <None Include="QuanLyThucPhamDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLThucPhamDS.Designer.cs</LastGenOutput>
+      <LastGenOutput>QuanLyThucPhamDS.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QLThucPhamDS.xss">
-      <DependentUpon>QLThucPhamDS.xsd</DependentUpon>
+    <None Include="QuanLyThucPhamDS.xss">
+      <DependentUpon>QuanLyThucPhamDS.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

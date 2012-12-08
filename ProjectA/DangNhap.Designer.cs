@@ -47,7 +47,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(380, 196);
+            this.pictureBox1.Size = new System.Drawing.Size(380, 245);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -55,7 +55,7 @@
             // labelxinchao
             // 
             this.labelxinchao.AutoSize = true;
-            this.labelxinchao.Location = new System.Drawing.Point(97, 296);
+            this.labelxinchao.Location = new System.Drawing.Point(97, 338);
             this.labelxinchao.Name = "labelxinchao";
             this.labelxinchao.Size = new System.Drawing.Size(51, 13);
             this.labelxinchao.TabIndex = 1;
@@ -64,7 +64,7 @@
             // label2tk
             // 
             this.label2tk.AutoSize = true;
-            this.label2tk.Location = new System.Drawing.Point(30, 323);
+            this.label2tk.Location = new System.Drawing.Point(30, 365);
             this.label2tk.Name = "label2tk";
             this.label2tk.Size = new System.Drawing.Size(59, 13);
             this.label2tk.TabIndex = 1;
@@ -73,7 +73,7 @@
             // label3mk
             // 
             this.label3mk.AutoSize = true;
-            this.label3mk.Location = new System.Drawing.Point(29, 358);
+            this.label3mk.Location = new System.Drawing.Point(29, 400);
             this.label3mk.Name = "label3mk";
             this.label3mk.Size = new System.Drawing.Size(56, 13);
             this.label3mk.TabIndex = 1;
@@ -81,14 +81,14 @@
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(100, 323);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(100, 365);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(153, 20);
             this.txtTaiKhoan.TabIndex = 3;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(100, 358);
+            this.txtMatKhau.Location = new System.Drawing.Point(100, 400);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(153, 20);
             this.txtMatKhau.TabIndex = 4;
@@ -96,7 +96,7 @@
             // 
             // btDangNhap
             // 
-            this.btDangNhap.Location = new System.Drawing.Point(275, 320);
+            this.btDangNhap.Location = new System.Drawing.Point(275, 362);
             this.btDangNhap.Name = "btDangNhap";
             this.btDangNhap.Size = new System.Drawing.Size(75, 54);
             this.btDangNhap.TabIndex = 5;
@@ -106,9 +106,10 @@
             // 
             // btExit
             // 
-            this.btExit.Location = new System.Drawing.Point(275, 219);
+            this.btExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btExit.Location = new System.Drawing.Point(275, 275);
             this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(75, 54);
+            this.btExit.Size = new System.Drawing.Size(75, 40);
             this.btExit.TabIndex = 2;
             this.btExit.Text = "Thoát";
             this.btExit.UseVisualStyleBackColor = true;
@@ -116,9 +117,9 @@
             // 
             // quanlybtn
             // 
-            this.quanlybtn.Location = new System.Drawing.Point(33, 219);
+            this.quanlybtn.Location = new System.Drawing.Point(33, 275);
             this.quanlybtn.Name = "quanlybtn";
-            this.quanlybtn.Size = new System.Drawing.Size(75, 54);
+            this.quanlybtn.Size = new System.Drawing.Size(75, 40);
             this.quanlybtn.TabIndex = 0;
             this.quanlybtn.Text = "Quản Lý";
             this.quanlybtn.UseVisualStyleBackColor = true;
@@ -126,9 +127,9 @@
             // 
             // nhanvienbtn
             // 
-            this.nhanvienbtn.Location = new System.Drawing.Point(155, 219);
+            this.nhanvienbtn.Location = new System.Drawing.Point(155, 275);
             this.nhanvienbtn.Name = "nhanvienbtn";
-            this.nhanvienbtn.Size = new System.Drawing.Size(75, 54);
+            this.nhanvienbtn.Size = new System.Drawing.Size(75, 40);
             this.nhanvienbtn.TabIndex = 1;
             this.nhanvienbtn.Text = "Nhân Viên";
             this.nhanvienbtn.UseVisualStyleBackColor = true;
@@ -140,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btExit;
-            this.ClientSize = new System.Drawing.Size(379, 397);
+            this.ClientSize = new System.Drawing.Size(379, 439);
             this.Controls.Add(this.nhanvienbtn);
             this.Controls.Add(this.quanlybtn);
             this.Controls.Add(this.btExit);
