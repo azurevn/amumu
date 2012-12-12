@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,9 +44,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbbLoaiThucPham = new System.Windows.Forms.ComboBox();
+            this.loaiThucPhamBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyThucPhamDS = new DoAnB.QuanLyThucPhamDS();
+            this.loaiThucPhamTableAdapter = new DoAnB.QuanLyThucPhamDSTableAdapters.LoaiThucPhamTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgChiTiet)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiThucPhamBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThucPhamDS)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTimKiem
@@ -96,7 +102,7 @@
             // 
             this.dgChiTiet.AllowUserToAddRows = false;
             this.dgChiTiet.AllowUserToDeleteRows = false;
-            this.dgChiTiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgChiTiet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgChiTiet.Location = new System.Drawing.Point(7, 20);
             this.dgChiTiet.Name = "dgChiTiet";
@@ -185,11 +191,29 @@
             // 
             // cbbLoaiThucPham
             // 
+            this.cbbLoaiThucPham.DataSource = this.loaiThucPhamBindingSource;
+            this.cbbLoaiThucPham.DisplayMember = "LoaiThucPham";
             this.cbbLoaiThucPham.FormattingEnabled = true;
             this.cbbLoaiThucPham.Location = new System.Drawing.Point(117, 104);
             this.cbbLoaiThucPham.Name = "cbbLoaiThucPham";
             this.cbbLoaiThucPham.Size = new System.Drawing.Size(201, 21);
             this.cbbLoaiThucPham.TabIndex = 30;
+            this.cbbLoaiThucPham.ValueMember = "MaLoaiThucPham";
+            this.cbbLoaiThucPham.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiThucPham_SelectedIndexChanged);
+            // 
+            // loaiThucPhamBindingSource
+            // 
+            this.loaiThucPhamBindingSource.DataMember = "LoaiThucPham";
+            this.loaiThucPhamBindingSource.DataSource = this.quanLyThucPhamDS;
+            // 
+            // quanLyThucPhamDS
+            // 
+            this.quanLyThucPhamDS.DataSetName = "QuanLyThucPhamDS";
+            this.quanLyThucPhamDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // loaiThucPhamTableAdapter
+            // 
+            this.loaiThucPhamTableAdapter.ClearBeforeFill = true;
             // 
             // QLThucPham
             // 
@@ -213,6 +237,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgChiTiet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.loaiThucPhamBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThucPhamDS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +261,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbbLoaiThucPham;
+        private QuanLyThucPhamDS quanLyThucPhamDS;
+        private System.Windows.Forms.BindingSource loaiThucPhamBindingSource;
+        private QuanLyThucPhamDSTableAdapters.LoaiThucPhamTableAdapter loaiThucPhamTableAdapter;
     }
 }

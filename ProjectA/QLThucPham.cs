@@ -19,13 +19,15 @@ namespace DoAnB
 
         private void QLThucPham_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quanLyThucPhamDS.LoaiThucPham' table. You can move, or remove it, as needed.
+            this.loaiThucPhamTableAdapter.Fill(this.quanLyThucPhamDS.LoaiThucPham);
 
         }
 
         private void bttThemDA_Click(object sender, EventArgs e)
         {
-            QLThucPham qltp = new QLThucPham();
-            qltp.ShowDialog();
+            ThemThucPham ttp = new ThemThucPham();
+            ttp.ShowDialog();
         }
 
         private void DataGridView_ChiTietThucPham()
@@ -48,7 +50,7 @@ namespace DoAnB
                 table.Columns["Ten"].ColumnName = "Tên Sản Phẩm";
                 table.Columns["Gia"].ColumnName = "Đơn Giá";
                 table.Columns["DonVi"].ColumnName = "Đơn Vị";
-                table.Columns["MaLoaiThucAn"].ColumnName = "Mã Loại Sản Phẩm";
+                table.Columns["MaLoaiThucPham"].ColumnName = "Mã Loại Sản Phẩm";
                 dgChiTiet.DataSource = table;
                 int i = dgChiTiet.RowCount;
                 lblSoTP.Text = i.ToString();
@@ -102,6 +104,23 @@ namespace DoAnB
         private void bttDongDA_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbbLoaiThucPham_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string connection = (@"Server = .\SQLEXPRESS; Integrated Security = True; Database = QuanLyCafe");
+                SqlConnection cnn = new SqlConnection(connection);
+                if (cnn.State == ConnectionState.Open)
+                    cnn.Close();
+                DataGridView_ChiTietThucPham();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

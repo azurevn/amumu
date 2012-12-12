@@ -28,6 +28,8 @@ namespace DoAnB
         private void FormNV_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nhanVienDS.NhanVien' table. You can move, or remove it, as needed.
+            this.nhanVienTableAdapter.Fill(this.nhanVienDS.NhanVien);
+            // TODO: This line of code loads data into the 'nhanVienDS.NhanVien' table. You can move, or remove it, as needed.
             //this.nhanVienTableAdapter.Fill(this.nhanVienDS.NhanVien)
             sttTenNV.Text = "Nhân Viên: " + Session._EmployeeName;
             sttMaNV.Text = "Mã Nhân Viên: " + Session._EmployeeId;
@@ -197,7 +199,7 @@ namespace DoAnB
                 }
                 else if (node.Name.Equals("NodeBia"))
                 {
-                    string selectCmd = "Select * from SamPham where MaLoaiThucUong = 24";
+                    string selectCmd = "Select * from SanPham where MaLoaiThucPham = 24";
                     SqlDataAdapter adap = new SqlDataAdapter(selectCmd, cnn);
                     SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adap);
                     DataTable table = new DataTable();
@@ -210,7 +212,7 @@ namespace DoAnB
                 }
                 else if (node.Name.Equals("NodeCocktails"))
                 {
-                    string selectCmd = "Select * from SanPham where MaLoaiThucUong = 25";
+                    string selectCmd = "Select * from SanPham where MaLoaiThucPham = 25";
                     SqlDataAdapter adap = new SqlDataAdapter(selectCmd, cnn);
                     SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adap);
                     DataTable table = new DataTable();
@@ -328,7 +330,6 @@ namespace DoAnB
             int employeeid = int.Parse(cbbTenNV.SelectedValue.ToString());
             String productid = dgMatHang.Rows[dgMatHang.CurrentRow.Index].Cells[0].Value.ToString();
 
-
             if (cnn.State == ConnectionState.Open)
                 cnn.Close();
             try
@@ -356,38 +357,6 @@ namespace DoAnB
             finally
             {
                 cnn.Close();
-            }
-        }
-
-        private void btThem_Click(object sender, EventArgs e)
-        {
-            ArrayList list = new ArrayList();
-            createHoadon();
-
-            foreach (Cart cart in hd._Cart)
-            {
-                list.Add(cart);
-            }
-            dgHoaDon.DataSource = list;
-            lblTien.Text = hd.tong_HoaDon.ToString();
-            int giamgia = int.Parse(lblTien.Text) * (int.Parse(txtGiamGia.Text) / 100);
-            lblTongCong.Text = (int.Parse(lblTien.Text) + int.Parse(txtPhiDV.Text) - giamgia).ToString();
-        }
-
-        private void btXoa_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                hd.remove_item(dgHoaDon.CurrentCell.FormattedValue.ToString());
-                dgHoaDon.DataSource = hd._Cart;
-                lblTien.Text = hd.tong_HoaDon.ToString();
-                int giamgia = int.Parse(lblTien.Text) * (int.Parse(txtGiamGia.Text) / 100);
-                lblTongCong.Text = (int.Parse(lblTien.Text) + int.Parse(txtPhiDV.Text) - giamgia).ToString();
-                dgHoaDon.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 
@@ -471,6 +440,38 @@ namespace DoAnB
                 cnn.Close();
             }
             return result;
+        }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+            ArrayList list = new ArrayList();
+            createHoadon();
+
+            foreach (Cart cart in hd._Cart)
+            {
+                list.Add(cart);
+            }
+            dgHoaDon.DataSource = list;
+            lblTien.Text = hd.tong_HoaDon.ToString();
+            int giamgia = int.Parse(lblTien.Text) * (int.Parse(txtGiamGia.Text) / 100);
+            lblTongCong.Text = (int.Parse(lblTien.Text) + int.Parse(txtPhiDV.Text) - giamgia).ToString();
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                hd.remove_item(dgHoaDon.CurrentCell.FormattedValue.ToString());
+                dgHoaDon.DataSource = hd._Cart;
+                lblTien.Text = hd.tong_HoaDon.ToString();
+                int giamgia = int.Parse(lblTien.Text) * (int.Parse(txtGiamGia.Text) / 100);
+                lblTongCong.Text = (int.Parse(lblTien.Text) + int.Parse(txtPhiDV.Text) - giamgia).ToString();
+                dgHoaDon.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
     }
